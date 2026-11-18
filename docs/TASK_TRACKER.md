@@ -2,7 +2,7 @@
 
 ## Current status
 
-Next.js starter initialization, Phase 3 Step 3.1 frontend preparation, and Step 3.2B header implementation are complete. Stop and wait for project-owner review before starting another task. Further business implementation, remote setup, and production changes are not authorized by this tracker.
+Next.js starter initialization, frontend preparation, header implementation, and homepage hero implementation are complete. Stop and wait for project-owner review before starting another task. Further business implementation, remote setup, and production changes are not authorized by this tracker.
 
 | Phase / task | Status | Evidence or next action |
 | --- | --- | --- |
@@ -13,6 +13,8 @@ Next.js starter initialization, Phase 3 Step 3.1 frontend preparation, and Step 
 | Next.js initialization | Completed | App Router, JavaScript, React, Tailwind CSS, ESLint, src directory, npm, and @/* alias initialized; lint and build passed. See verification record below. |
 | Phase 3 Step 3.1 — starter cleanup and frontend structure | Completed | Minimal placeholder, neutral global styles, basic metadata, and requested directories prepared; lint and build passed. |
 | Phase 3 Step 3.2B — responsive header | Implemented; review pending | Logo, navigation, call button, and responsive menu added; lint and build passed. Browser accessibility and visual review remain pending. |
+| Phase 3 Step 3.3C — recover hero assets | Completed | Three original images downloaded and verified; hero implementation awaits approval. |
+| Phase 3 Step 3.3D — homepage hero | Implemented; review pending | Original local assets, responsive layout, and links added; lint and build passed. Browser visual checks remain pending. |
 | Git and GitHub setup | Pending approval | No automatic commits, pushes, or remote setup. |
 | Frontend implementation | Pending approval | Faithful reproduction after references and scope are agreed. |
 | WordPress content and SEO integration | Pending approval | Inspect actual responses and agree mapping and refresh behavior. |
@@ -58,3 +60,18 @@ Await the project owner's next approved task. Hosting/routing, CMS URL arrangeme
 - Added the responsive shared header using the supplied JPEG and reference screenshots, with the specified routes and telephone link. Exact dimensions and breakpoints remain provisional.
 - `npm run lint` and `npm run build` passed. Reviewed menu labels, expanded state, controlled navigation, keyboard-operable native controls, focus indicators, and pathname normalization in code. Browser interaction, visual fidelity, and hydration warnings have not been independently verified in a browser.
 - Only the home placeholder currently exists; the other navigation destinations await implementation. No dependencies, WordPress, hosting, or GitHub changes were made.
+
+## Phase 3 Step 3.3C — hero asset recovery
+
+- Downloaded the three images referenced by the saved WordPress CSS from `jobshubhr.com` into `public/images/hero/`, preserving filenames.
+- Verified `hero-imgs-Arrows-CF.png` as PNG, 811 × 522, with transparent pixels; it contains both professionals in one image.
+- Verified `happy-businesswoman-holding-folder-scaled.jpg` as JPEG, 2560 × 1707, without an alpha channel, and `shape-3.png` as PNG, 1000 × 1000, with transparent pixels.
+- No application components or production services were changed. Hero implementation remains pending approval.
+
+## Phase 3 Step 3.3D — homepage hero
+
+- Corrected the tablet-width grid so the description, people composition, and photograph remain side by side rather than placing the description on its own row. Lint and build passed; matching the reference at the user's viewport and zoom still needs visual verification.
+- Refined the hero against the supplied desktop reference: widened the content area, adjusted column spacing, raised the people within the circle, repositioned the circular link, and adjusted the photograph crop. Lint and build passed; browser comparison remains pending.
+- Replaced the placeholder with a responsive hero using the recovered local images, CSS circle, SVG About Us link, supplied content, and contact CTA. Header remains unchanged.
+- `npm run lint` and `npm run build` passed; all three image paths exist locally. Browser preview was unavailable, so desktop, tablet, mobile, breakpoint, and visual-fidelity checks remain pending.
+- The responsive grid avoids the original Elementor transforms; exact positioning, crop, and typography require visual review. No dependencies or production changes were made.
