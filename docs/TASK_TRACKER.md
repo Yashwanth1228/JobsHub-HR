@@ -20,6 +20,8 @@ Next.js starter initialization, frontend preparation, header, hero, and the rema
 | Step 3.6.2 — metrics and About Us refinement | Implemented; review pending | Recovered the original transparent cutout and rebuilt the two-column composition. Lint and build passed; browser comparison remains pending. |
 | Step 3.6.3 — services refinement | Implemented; review pending | Recovered the original background pattern and recreated the two-card and three-card rows; lint and build passed. |
 | Step 3.6.4 — CEO section refinement | Implemented; review pending | Text-first layout and original image sizing adapted from the saved WordPress CSS; lint and build passed. |
+| Step 3.6.5 — clients marquee | Implemented; review pending | Added a CSS logo loop and reduced-motion static layout; lint and build passed. Browser verification remains pending. |
+| Step 3.6.5A — marquee layout fix | Implemented; review pending | Replaced missing CSS-module mappings with scoped class names; lint and build passed, browser verification pending. |
 | Git and GitHub setup | Pending approval | No automatic commits, pushes, or remote setup. |
 | Frontend implementation | Pending approval | Faithful reproduction after references and scope are agreed. |
 | WordPress content and SEO integration | Pending approval | Inspect actual responses and agree mapping and refresh behavior. |
@@ -121,3 +123,16 @@ Await the project owner's next approved task. Hosting/routing, CMS URL arrangeme
 - Centered the desktop photograph within its column and adjusted the heading, name weight, and biography line height against the supplied reference. Lint and build passed; browser comparison remains pending.
 - Positioned the existing biography to the left of the original photograph on desktop, using the saved reference's 75% image width and 15px radius. Tablet and mobile stack text before the image; mobile image width is 50%.
 - `npm run lint` and `npm run build` passed; the original image file exists. Browser visual, responsive, and overflow checks remain pending.
+
+## Step 3.6.5 — clients marquee
+
+- Replaced the manual scroller with a 70-second linear leftward CSS loop using two equal logo groups; duplicate logos are hidden from assistive technology. Reduced motion disables animation and wraps one group.
+- All 14 original client logo files exist. `npm run lint` and `npm run build` passed. Browser checks of motion, seamlessness, reduced motion, and responsive overflow remain pending.
+
+## Step 3.6.5A — marquee layout fix
+
+- Increased the Our Clients heading to medium weight. Lint and build passed.
+- Increased marquee speed to a 55-second cycle and added pause on logo hover. Lint and build passed; browser interaction remains pending verification.
+- The existing Turbopack CSS loader emitted the CSS module as ordinary CSS, leaving its imported class mappings undefined in the rendered HTML. Replaced it with uniquely named CSS classes and explicit non-wrapping flex rows.
+- The rebuilt HTML contains the named viewport and track, two logo groups and 28 logo instances, with no undefined classes. CSS moves the equal groups left by half the track width; reduced motion disables animation and permits keyboard scrolling through one row.
+- `npm run lint` and `npm run build` passed. Browser verification of layout, seam, motion, scrollbar, and responsive behavior remains pending.
