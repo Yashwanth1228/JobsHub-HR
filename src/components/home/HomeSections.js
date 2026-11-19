@@ -6,6 +6,22 @@ const wrap = "mx-auto max-w-[1150px] px-6 md:px-8";
 const heading = "text-3xl font-semibold leading-tight md:text-4xl";
 const img = (name) => `/images/home/${name}`;
 
+function ServiceCard({ item, index }) {
+  const breakAfter = index < 2 ? item.text.indexOf("? ") + 1 : index === 3 ? "Trusted by top Indian companies.".length : index === 4 ? "Build trust. Hire safely.".length : 0;
+  const first = breakAfter ? item.text.slice(0, breakAfter) : item.text;
+  const rest = breakAfter ? item.text.slice(breakAfter).trimStart() : "";
+  return (
+    <article className={`min-w-0 rounded-[20px] border border-[#333] p-[30px] md:p-[40px] ${index < 2 ? "bg-white" : "bg-transparent"}`}>
+      <div aria-hidden="true" className="ml-[30px] h-[30px] w-[30px] rounded-full bg-[#b61a00]" />
+      <h3 className="mt-9 text-[26px] leading-tight font-medium md:text-[28px]">{item.title}</h3>
+      <div className="mt-5 text-base leading-relaxed">
+        <p>{first}{index >= 3 && <><br />{rest}</>}</p>
+        {index < 2 && rest && <p className="mt-4">{rest}</p>}
+      </div>
+    </article>
+  );
+}
+
 export default function HomeSections() {
   return (
     <>
@@ -46,10 +62,12 @@ export default function HomeSections() {
         </div>
       </section>
 
-      <section aria-labelledby="services-heading" className="bg-[#f8f8f8] py-16 text-[#303030] md:py-20">
-        <div className={wrap}><h2 id="services-heading" className={heading}>Our Services</h2>
-          <p className="mt-4 max-w-3xl leading-relaxed">At JOBSHUB HR, we provide a full range of HR services for companies in Bangalore. As a trusted recruitment agency in Bangalore, we deliver smart and efficient staffing solutions that help your business grow with the right people.</p>
-          <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{services.map(item => <article key={item.title} className="rounded-[20px] border border-[#b61a00] bg-white p-7"><h3 className="text-xl font-semibold">{item.title}</h3><p className="mt-4 leading-relaxed">{item.text}</p></article>)}</div>
+      <section aria-labelledby="services-heading" className="relative my-[50px] bg-white px-[30px] py-10 text-[#303030]">
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[url('/images/home/Pattern-2-Convertido.png')] bg-center bg-repeat opacity-10 [background-size:50%_auto]" />
+        <div className="relative mx-auto max-w-[1100px]"><h2 id="services-heading" className={`${heading} text-center`}>Our Services</h2>
+          <p className="mx-auto mt-4 max-w-[600px] text-center leading-relaxed">At JOBSHUB HR, we provide a full range of HR services for companies in Bangalore. As a trusted recruitment agency in Bangalore, we deliver smart and efficient staffing solutions that help your business grow with the right people.</p>
+          <div className="mt-10 grid gap-10 md:grid-cols-2">{services.slice(0, 2).map((item, index) => <ServiceCard key={item.title} item={item} index={index} />)}</div>
+          <div className="mt-10 grid gap-[10px] md:grid-cols-3">{services.slice(2).map((item, index) => <ServiceCard key={item.title} item={item} index={index + 2} />)}</div>
         </div>
       </section>
 
