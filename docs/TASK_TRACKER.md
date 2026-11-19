@@ -70,6 +70,11 @@ Await the project owner's next approved task. Hosting/routing, CMS URL arrangeme
 
 ## Phase 3 Step 3.3D — homepage hero
 
+- Moved the desktop circle and right-hand content upward and shifted the whole circle slightly left, without changing their sizes. Lint and build passed; visual review remains pending.
+- Reduced desktop hero spacing and shifted the circle right. The temporary viewport-based size constraints were reverted at the owner's request, restoring the circle and photograph sizes. Lint and build passed; browser verification remains pending.
+- Reduced the space above the red circle and adjusted the people image slightly up and right. Lint and build passed; visual review is pending.
+- Centered the people inside the clipped red circle and moved the rotating About Us text onto its perimeter, per the owner's clarification. Lint and build passed; visual review is pending.
+- Adjusted the centered hero content width and About Us ring position against the supplied reference, and added slow rotation that respects reduced-motion preferences. The people image remains centered in the red circle. Lint and build passed; browser visual comparison is pending.
 - Corrected the tablet-width grid so the description, people composition, and photograph remain side by side rather than placing the description on its own row. Lint and build passed; matching the reference at the user's viewport and zoom still needs visual verification.
 - Refined the hero against the supplied desktop reference: widened the content area, adjusted column spacing, raised the people within the circle, repositioned the circular link, and adjusted the photograph crop. Lint and build passed; browser comparison remains pending.
 - Replaced the placeholder with a responsive hero using the recovered local images, CSS circle, SVG About Us link, supplied content, and contact CTA. Header remains unchanged.
