@@ -19,6 +19,7 @@ Next.js starter initialization, frontend preparation, header, hero, and the rema
 | Step 3.6.1 — process section refinement | Implemented; review pending | Recreated the boxed red layout and responsive process columns from the saved reference; lint and build passed. |
 | Step 3.6.2 — metrics and About Us refinement | Implemented; review pending | Recovered the original transparent cutout and rebuilt the two-column composition. Lint and build passed; browser comparison remains pending. |
 | Step 3.6.3 — services refinement | Implemented; review pending | Recovered the original background pattern and recreated the two-card and three-card rows; lint and build passed. |
+| Step 3.6.4 — CEO section refinement | Implemented; review pending | Text-first layout and original image sizing adapted from the saved WordPress CSS; lint and build passed. |
 | Git and GitHub setup | Pending approval | No automatic commits, pushes, or remote setup. |
 | Frontend implementation | Pending approval | Faithful reproduction after references and scope are agreed. |
 | WordPress content and SEO integration | Pending approval | Inspect actual responses and agree mapping and refresh behavior. |
@@ -114,3 +115,9 @@ Await the project owner's next approved task. Hosting/routing, CMS URL arrangeme
 - Recovered `Pattern-2-Convertido.png` from the saved WordPress CSS URL; verified PNG 1191 × 1191 with alpha. The section repeats it at 50% size with 10% overlay opacity.
 - Rebuilt the first row as two cards and the second as three, preserving all five descriptions and restoring saved paragraph/line breaks. Cards use dark borders, red circles, and the reference's 20px radius and responsive padding.
 - `npm run lint` and `npm run build` passed. Generated HTML contains all five service headings and references the local pattern. Browser checks of visual fidelity, mobile/tablet layout, and overflow remain pending.
+
+## Step 3.6.4 — CEO section
+
+- Centered the desktop photograph within its column and adjusted the heading, name weight, and biography line height against the supplied reference. Lint and build passed; browser comparison remains pending.
+- Positioned the existing biography to the left of the original photograph on desktop, using the saved reference's 75% image width and 15px radius. Tablet and mobile stack text before the image; mobile image width is 50%.
+- `npm run lint` and `npm run build` passed; the original image file exists. Browser visual, responsive, and overflow checks remain pending.

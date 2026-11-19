@@ -71,10 +71,16 @@ export default function HomeSections() {
         </div>
       </section>
 
-      <section aria-labelledby="ceo-heading" className="py-16 text-[#303030] md:py-20"><div className={`${wrap} grid items-center gap-10 md:grid-cols-2`}>
-        <Image src={img("ceo-new.jpeg")} alt="Manjula Krishnamurthy" width={700} height={700} sizes="(max-width: 767px) 90vw, 40vw" className="w-full max-w-[500px] rounded-[20px] object-cover" />
-        <div><p className="text-[#b61a00]">CEO OF JobsHub HR</p><h2 id="ceo-heading" className={`${heading} mt-2`}>Manjula Krishnamurthy</h2><p className="mt-5 leading-relaxed">Manjula Krishna Murthy, a forward-thinking leader and CEO of JobsHub HR, is dedicated to transforming HR solutions. Her strategic vision and unwavering commitment to excellence have played a pivotal role in establishing JobsHub HR as a respected leader in the industry. Manjula’s dedication to fostering talent and innovation continues to drive JobsHub HR success in the dynamic HR landscape.</p></div>
-      </div></section>
+      <section aria-labelledby="ceo-heading" className="px-[30px] py-[50px] text-[#313131]">
+        <div className="mx-auto grid max-w-[1140px] items-center gap-5 min-[768px]:gap-10 min-[1025px]:grid-cols-2 min-[1025px]:gap-[120px]">
+          <div className="min-w-0">
+            <h2 id="ceo-heading" className="text-[28px] leading-tight font-normal md:text-[33px]">CEO OF JobsHub HR</h2>
+            <p className="mt-2 text-[18px] leading-[1.2] font-normal tracking-[0.4px] min-[768px]:text-[33px] min-[1025px]:text-[40px] min-[1025px]:tracking-[-2px]">Manjula Krishnamurthy</p>
+            <p className="mt-7 leading-6">Manjula Krishna Murthy, a forward-thinking leader and CEO of JobsHub HR, is dedicated to transforming HR solutions. Her strategic vision and unwavering commitment to excellence have played a pivotal role in establishing JobsHub HR as a respected leader in the industry. Manjula’s dedication to fostering talent and innovation continues to drive JobsHub HR success in the dynamic HR landscape.</p>
+          </div>
+          <div className="min-w-0 min-[1025px]:flex min-[1025px]:justify-center"><Image src={img("ceo-new.jpeg")} alt="Manjula Krishnamurthy" width={700} height={700} sizes="(max-width: 767px) 50vw, (max-width: 1024px) 75vw, 35vw" className="h-auto w-1/2 rounded-[15px] min-[768px]:w-3/4" /></div>
+        </div>
+      </section>
 
       <section aria-labelledby="clients-heading" className="bg-[#f8f8f8] py-16"><div className={wrap}><h2 id="clients-heading" className={heading}>Our Clients</h2><div tabIndex={0} aria-label="Client logos, scroll horizontally to see more" className="mt-8 flex gap-8 overflow-x-auto pb-4 focus-visible:outline-2 focus-visible:outline-[#b61a00]">{clientLogos.map((logo, index) => <div key={logo} className="flex h-24 w-36 shrink-0 items-center justify-center rounded bg-white p-3"><Image src={img(logo)} alt={`Client logo ${index + 1}`} width={160} height={80} className="max-h-full w-auto max-w-full object-contain" /></div>)}</div></div></section>
 
