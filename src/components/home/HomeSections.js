@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { clientLogos, faqs, posts, processes, services, testimonials } from "./homeContent";
+import { clientLogos, faqs, posts, processes, services } from "./homeContent";
+import TestimonialsCarousel from "./TestimonialsCarousel";
 import "./ClientsMarquee.css";
 
 const wrap = "mx-auto max-w-[1150px] px-6 md:px-8";
@@ -83,9 +84,9 @@ export default function HomeSections() {
         </div>
       </section>
 
-      <section aria-labelledby="clients-heading" className="bg-white px-[30px] py-16"><div className="mx-auto max-w-[1140px]"><h2 id="clients-heading" className="text-3xl font-medium text-[#313131] md:text-[32px]">Our Clients</h2><div className="clients-marquee-viewport mt-12" tabIndex={0} aria-label="Client logos"><div className="clients-marquee-track">{[false, true].map((duplicate) => <div key={String(duplicate)} aria-hidden={duplicate ? "true" : undefined} className={`clients-marquee-group${duplicate ? " clients-marquee-duplicate" : ""}`}>{clientLogos.map((logo, index) => <div key={logo} className="clients-marquee-logo"><Image src={img(logo)} alt={duplicate ? "" : `Client logo ${index + 1}`} width={275} height={138} /></div>)}</div>)}</div></div></div></section>
+      <section aria-labelledby="clients-heading" className="bg-white px-[30px] py-16"><div className="mx-auto max-w-[1140px]"><h2 id="clients-heading" className="text-3xl font-medium text-[#313131] md:text-[32px]">Our Clients</h2><div className="clients-marquee-viewport mt-12 overflow-hidden" tabIndex={0} aria-label="Client logos"><div className="clients-marquee-track flex w-max flex-nowrap">{[false, true].map((duplicate) => <div key={String(duplicate)} aria-hidden={duplicate ? "true" : undefined} className={`clients-marquee-group flex w-max shrink-0 flex-nowrap${duplicate ? " clients-marquee-duplicate" : ""}`}>{clientLogos.map((logo, index) => <div key={logo} className="clients-marquee-logo flex shrink-0"><Image src={img(logo)} alt={duplicate ? "" : `Client logo ${index + 1}`} width={275} height={138} /></div>)}</div>)}</div></div></div></section>
 
-      <section aria-labelledby="testimonials-heading" className="py-16 md:py-20"><div className={wrap}><h2 id="testimonials-heading" className={heading}>Testimonials</h2><div tabIndex={0} aria-label="Testimonials, scroll horizontally to see more" className="mt-8 flex snap-x gap-6 overflow-x-auto pb-4 focus-visible:outline-2 focus-visible:outline-[#b61a00]">{testimonials.map(item => <blockquote key={item.name} className="w-[min(85vw,360px)] shrink-0 snap-start rounded-[20px] border border-[#b61a00] p-7"><p className="leading-relaxed">“{item.quote}”</p><footer className="mt-5"><strong>{item.name}</strong>{item.role && <span className="block text-sm">{item.role}</span>}</footer></blockquote>)}</div></div></section>
+      <TestimonialsCarousel />
 
       <section aria-labelledby="blog-heading" className="bg-[#f8f8f8] py-16 md:py-20"><div className={wrap}><h2 id="blog-heading" className={heading}>Our Blog</h2><div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">{posts.map(post => <article key={post.href} className="overflow-hidden rounded-[20px] bg-white"><Link href={post.href} className="block focus-visible:outline-2 focus-visible:outline-[#b61a00]"><Image src={img(post.image)} alt="" width={300} height={200} sizes="(max-width: 767px) 90vw, 33vw" className="aspect-[3/2] w-full object-cover" /></Link><div className="p-6"><h3 className="text-xl font-semibold"><Link href={post.href} className="focus-visible:outline-2 focus-visible:outline-[#b61a00]">{post.title}</Link></h3><Link href={post.href} aria-label={`Read more about ${post.title}`} className="mt-4 inline-block text-[#b61a00] focus-visible:outline-2">Read More »</Link></div></article>)}</div></div></section>
 
