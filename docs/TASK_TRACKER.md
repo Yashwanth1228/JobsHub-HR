@@ -16,6 +16,7 @@ Next.js starter initialization, frontend preparation, header, hero, and the rema
 | Phase 3 Step 3.3C — recover hero assets | Completed | Three original images downloaded and verified; hero implementation awaits approval. |
 | Phase 3 Step 3.3D — homepage hero | Implemented; review pending | Original local assets, responsive layout, and links added; lint and build passed. Browser visual checks remain pending. |
 | Phase 3 Step 3.4 — remaining homepage | Implemented; review pending | Added saved homepage sections, local assets, native FAQ disclosures, and disabled enquiry form. Browser and route review remain pending. |
+| Step 3.6.1 — process section refinement | Implemented; review pending | Recreated the boxed red layout and responsive process columns from the saved reference; lint and build passed. |
 | Git and GitHub setup | Pending approval | No automatic commits, pushes, or remote setup. |
 | Frontend implementation | Pending approval | Faithful reproduction after references and scope are agreed. |
 | WordPress content and SEO integration | Pending approval | Inspect actual responses and agree mapping and refresh behavior. |
@@ -89,3 +90,11 @@ Await the project owner's next approved task. Hosting/routing, CMS URL arrangeme
 - The quote form is disabled and provides the existing phone number as an alternative. No submission integration is implemented.
 - `npm run lint` and `npm run build` passed. The generated HTML contains 17 FAQ disclosures and a disabled fieldset; all referenced home image files exist. Browser testing was unavailable, so responsive rendering, FAQ interaction, horizontal scrolling, and visual fidelity remain unverified.
 - Blog and other internal routes are preserved from the reference but their pages do not exist locally yet. Client logos and testimonials use keyboard-focusable horizontal scrolling rather than the original automated widgets. Further visual comparison, image/asset review, routing, and form integration require follow-up.
+
+## Step 3.6.1 — process section
+
+- Adjusted the desktop dark circle's position against the supplied crop. Lint and build passed; visual comparison remains pending.
+- Reduced the decorative circle and rounded all four container corners. Made the header sticky at the top, with a scrollable responsive menu on short screens. Lint and build passed; browser review remains pending.
+- Replaced the full-width cards with a centered red container, CSS background circle, and heading beside the three original process items on desktop. Mobile and tablet use stacked or two-column layouts.
+- Verified the three original image files exist; `npm run lint` and `npm run build` passed. Grid children can shrink and the decoration is clipped; browser checks of visual fidelity and horizontal overflow remain pending.
+- The saved WordPress CSS uses a background overlay image; the decorative circle is recreated in CSS as requested. No other homepage section was changed.

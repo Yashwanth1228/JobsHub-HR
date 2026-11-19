@@ -9,13 +9,18 @@ const img = (name) => `/images/home/${name}`;
 export default function HomeSections() {
   return (
     <>
-      <section aria-labelledby="process-heading" className="bg-[#b61a00] py-16 text-white md:py-20">
-        <div className={wrap}>
-          <p>Our Process</p><h2 id="process-heading" className={`${heading} mt-2`}>Our Working Process</h2>
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {processes.map((item) => <article key={item.title} className="overflow-hidden rounded-[20px] bg-white text-[#303030]">
-              <Image src={img(item.image)} alt="" width={800} height={533} sizes="(max-width: 767px) 90vw, 33vw" className="h-52 w-full object-cover" />
-              <div className="p-6"><h3 className="text-xl font-semibold">{item.title}</h3><p className="mt-3 leading-relaxed">{item.text}</p></div>
+      <section aria-labelledby="process-heading" className="px-[30px] text-white">
+        <div className="relative mx-auto max-w-[1140px] overflow-hidden rounded-[20px] bg-[#b61a00] p-[30px] md:p-[60px]">
+          <div aria-hidden="true" className="pointer-events-none absolute -top-[20%] -left-[7%] aspect-square w-[40%] rounded-full bg-[#800e02] max-md:-top-[10%] max-md:-left-[35%] max-md:w-[85%]" />
+          <div className="relative grid min-w-0 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="min-w-0">
+              <p className="text-[17px]">Our Process</p>
+              <h2 id="process-heading" className="mt-4 text-[25px] leading-[1.15] font-normal md:text-[30px]">Our Working Process</h2>
+            </div>
+            {processes.map((item) => <article key={item.title} className="min-w-0">
+              <Image src={img(item.image)} alt="" width={800} height={533} sizes="(max-width: 639px) 85vw, (max-width: 1023px) 42vw, 23vw" className="aspect-[3/2] w-full rounded-[10px] object-cover" />
+              <h3 className="mt-5 text-[22px] leading-tight font-semibold">{item.title}</h3>
+              <p className="mt-4 leading-relaxed">{item.text}</p>
             </article>)}
           </div>
         </div>

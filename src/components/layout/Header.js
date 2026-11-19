@@ -37,7 +37,7 @@ export default function Header() {
   }
 
   return (
-    <header className="border-b border-[#333] bg-white text-black">
+    <header className="sticky top-0 z-50 border-b border-[#333] bg-white text-black">
       <div className="flex min-h-24 items-stretch xl:min-h-[85px]">
         <Link href="/" aria-label="JobsHub HR home" onClick={() => setOpen(false)} className="flex w-1/2 items-center justify-start border-r border-[#333] px-4 focus-visible:outline-2 focus-visible:outline-blue-700 sm:w-1/4 sm:justify-center xl:w-[23.7%]">
           <Image src={logo} alt="JobsHub HR" priority className="h-auto w-28 max-w-full xl:-translate-x-8" />
@@ -55,7 +55,7 @@ export default function Header() {
           </button>
         </div>
       </div>
-      <nav id="responsive-navigation" aria-label="Responsive navigation" hidden={!open} className="border-t border-[#333] xl:hidden">
+      <nav id="responsive-navigation" aria-label="Responsive navigation" hidden={!open} className="max-h-[calc(100dvh-6rem)] overflow-y-auto border-t border-[#333] xl:hidden">
         {navigation(true)}
       </nav>
     </header>
