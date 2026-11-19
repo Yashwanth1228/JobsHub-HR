@@ -18,6 +18,7 @@ Next.js starter initialization, frontend preparation, header, hero, and the rema
 | Phase 3 Step 3.4 — remaining homepage | Implemented; review pending | Added saved homepage sections, local assets, native FAQ disclosures, and disabled enquiry form. Browser and route review remain pending. |
 | Step 3.6.1 — process section refinement | Implemented; review pending | Recreated the boxed red layout and responsive process columns from the saved reference; lint and build passed. |
 | Step 3.6.2 — metrics and About Us refinement | Implemented; review pending | Recovered the original transparent cutout and rebuilt the two-column composition. Lint and build passed; browser comparison remains pending. |
+| Step 3.6.3 — services refinement | Implemented; review pending | Recovered the original background pattern and recreated the two-card and three-card rows; lint and build passed. |
 | Git and GitHub setup | Pending approval | No automatic commits, pushes, or remote setup. |
 | Frontend implementation | Pending approval | Faithful reproduction after references and scope are agreed. |
 | WordPress content and SEO integration | Pending approval | Inspect actual responses and agree mapping and refresh behavior. |
@@ -107,3 +108,9 @@ Await the project owner's next approved task. Hosting/routing, CMS URL arrangeme
 - Recovered the original `happy-businesswoman-holding-folder-removebg-preview.png` from the saved WordPress CSS URL; verified it is a 612 × 408 PNG with an alpha channel.
 - Rebuilt metrics and About Us as two desktop columns, with a contained cutout, metric badges, and two-column checklist. Narrow layouts stack the visual and text.
 - `npm run lint` and `npm run build` passed. Browser visual, clipping, and horizontal overflow checks were unavailable and remain pending. No other homepage section was modified.
+
+## Step 3.6.3 — services
+
+- Recovered `Pattern-2-Convertido.png` from the saved WordPress CSS URL; verified PNG 1191 × 1191 with alpha. The section repeats it at 50% size with 10% overlay opacity.
+- Rebuilt the first row as two cards and the second as three, preserving all five descriptions and restoring saved paragraph/line breaks. Cards use dark borders, red circles, and the reference's 20px radius and responsive padding.
+- `npm run lint` and `npm run build` passed. Generated HTML contains all five service headings and references the local pattern. Browser checks of visual fidelity, mobile/tablet layout, and overflow remain pending.
