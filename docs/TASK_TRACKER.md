@@ -17,6 +17,7 @@ Next.js starter initialization, frontend preparation, header, hero, and the rema
 | Phase 3 Step 3.3D — homepage hero | Implemented; review pending | Original local assets, responsive layout, and links added; lint and build passed. Browser visual checks remain pending. |
 | Phase 3 Step 3.4 — remaining homepage | Implemented; review pending | Added saved homepage sections, local assets, native FAQ disclosures, and disabled enquiry form. Browser and route review remain pending. |
 | Step 3.6.1 — process section refinement | Implemented; review pending | Recreated the boxed red layout and responsive process columns from the saved reference; lint and build passed. |
+| Step 3.6.2 — metrics and About Us refinement | Implemented; review pending | Recovered the original transparent cutout and rebuilt the two-column composition. Lint and build passed; browser comparison remains pending. |
 | Git and GitHub setup | Pending approval | No automatic commits, pushes, or remote setup. |
 | Frontend implementation | Pending approval | Faithful reproduction after references and scope are agreed. |
 | WordPress content and SEO integration | Pending approval | Inspect actual responses and agree mapping and refresh behavior. |
@@ -98,3 +99,11 @@ Await the project owner's next approved task. Hosting/routing, CMS URL arrangeme
 - Replaced the full-width cards with a centered red container, CSS background circle, and heading beside the three original process items on desktop. Mobile and tablet use stacked or two-column layouts.
 - Verified the three original image files exist; `npm run lint` and `npm run build` passed. Grid children can shrink and the decoration is clipped; browser checks of visual fidelity and horizontal overflow remain pending.
 - The saved WordPress CSS uses a background overlay image; the decorative circle is recreated in CSS as requested. No other homepage section was changed.
+
+## Step 3.6.2 — metrics and About Us
+
+- Shifted the businesswoman cutout right to separate it from the diverse-hires badge, matching the supplied reference more closely. Lint and build passed; browser review remains pending.
+- Adjusted desktop section width, heading weight, cutout scale, and metric badge sizing against the supplied comparison screenshots. Lint and build passed; browser verification remains pending.
+- Recovered the original `happy-businesswoman-holding-folder-removebg-preview.png` from the saved WordPress CSS URL; verified it is a 612 × 408 PNG with an alpha channel.
+- Rebuilt metrics and About Us as two desktop columns, with a contained cutout, metric badges, and two-column checklist. Narrow layouts stack the visual and text.
+- `npm run lint` and `npm run build` passed. Browser visual, clipping, and horizontal overflow checks were unavailable and remain pending. No other homepage section was modified.

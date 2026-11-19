@@ -27,17 +27,20 @@ export default function HomeSections() {
       </section>
 
       <section aria-labelledby="about-heading" className="py-16 text-[#303030] md:py-20">
-        <div className={wrap}>
-          <div className="grid gap-5 md:grid-cols-3">
-            {[['Employee Retention Rate', '85% average retention after 12 months using our solutions'], ['', '50% increase in diverse hires'], ['Employee Satisfaction', '90% employee satisfaction after implementing management improvements.']].map(([title, text]) => <div key={text} className="rounded-[20px] border border-[#b61a00] p-6">{title && <h3 className="font-semibold">{title}</h3>}<p className="mt-2">{text}</p></div>)}
+        <div className="mx-auto grid max-w-[1140px] gap-10 px-6 lg:grid-cols-2 lg:gap-[60px] lg:px-0">
+          <div className="relative mx-auto flex min-h-[440px] w-full max-w-[540px] flex-col justify-between overflow-hidden sm:min-h-[500px]">
+            <Image src={img("happy-businesswoman-holding-folder-removebg-preview.png")} alt="Recruitment professional holding a folder" width={612} height={408} sizes="(max-width: 1023px) 90vw, 50vw" className="pointer-events-none absolute -right-[18%] bottom-[85px] h-auto w-full" />
+            <div className="relative z-10 w-[min(50%,270px)] min-w-[155px] rounded-[20px] border border-[#b61a00] bg-white p-5 sm:p-[30px]"><h3>Employee Retention Rate</h3><p className="mt-2 leading-relaxed">85% average retention after 12 months using our solutions</p></div>
+            <div className="relative z-10 my-4 flex w-fit max-w-[55%] items-center gap-2 rounded-[20px] bg-[#b61a00] px-4 py-4 text-sm font-semibold text-white sm:px-5 lg:max-w-none lg:whitespace-nowrap lg:text-base"><svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 shrink-0 fill-current"><path d="M12 2C7 2 3 3.3 3 5s4 3 9 3 9-1.3 9-3-4-3-9-3Zm-9 5v3c0 1.7 4 3 9 3s9-1.3 9-3V7c-2 1.4-5.5 2-9 2S5 8.4 3 7Zm0 5v3c0 1.7 4 3 9 3s9-1.3 9-3v-3c-2 1.4-5.5 2-9 2s-7-.6-9-2Zm0 5v2c0 1.7 4 3 9 3s9-1.3 9-3v-2c-2 1.4-5.5 2-9 2s-7-.6-9-2Z" /></svg><span>50% increase in diverse hires</span></div>
+            <div className="relative z-10 flex items-center gap-4 rounded-[20px] border border-[#333] bg-white p-5"><svg aria-hidden="true" viewBox="0 0 24 24" className="h-7 w-7 shrink-0 fill-none stroke-black" strokeWidth="2"><circle cx="12" cy="12" r="9" /><path d="M8 14c1 2 2.3 3 4 3s3-1 4-3M8.5 9h.01M15.5 9h.01" strokeLinecap="round" strokeWidth="2.5" /></svg><div><h3>Employee Satisfaction</h3><p className="mt-2 leading-relaxed">90% employee satisfaction after implementing management improvements.</p></div></div>
           </div>
-          <div className="mt-16 grid gap-8 md:grid-cols-[1fr_2fr]">
-            <div><p className="text-[#b61a00]">About Us</p><h2 id="about-heading" className={`${heading} mt-2`}>We are top and best recruitment agency in Bangalore</h2></div>
-            <div className="space-y-4 leading-relaxed">
+          <div className="min-w-0">
+            <p className="text-[24px]">About Us</p><h2 id="about-heading" className="mt-2 text-[30px] leading-[1.2] font-normal tracking-[-1px] md:text-[40px] md:tracking-[-2px]">We are top and best recruitment agency in Bangalore</h2>
+            <div className="mt-7 space-y-4 leading-relaxed">
               <p>JobsHub HR provides comprehensive HR solutions designed to help businesses build a skilled, productive, and engaged workforce. As a top recruitment agency in Bangalore, we offer professional services including recruitment, staffing, payroll management, HR compliance, and employee relations.</p>
               <p>Moreover, our HR solutions include developing and implementing effective HR policies and procedures, managing employee benefits, and supporting businesses in handling employee-related matters. In addition, we help companies streamline their HR processes while maintaining compliance with applicable labour laws and regulations.</p>
               <p>With a professional and client-focused approach, JobsHub HR supports businesses in managing their workforce efficiently and achieving their long-term HR goals. As a best recruitment agency in Bangalore, we provide reliable and customized HR solutions to meet the unique staffing needs of businesses. Therefore, our end-to-end HR services offer professional support for recruitment, staffing, and overall workforce management.</p>
-              <ul className="grid gap-2 sm:grid-cols-2">{["Insightful analytics", "Smarter strategies", "Actionable outcomes", "Informed growth"].map(x => <li key={x}>✓ {x}</li>)}</ul>
+              <ul className="grid gap-x-5 gap-y-4 pt-3 sm:grid-cols-2">{["Insightful analytics", "Smarter strategies", "Actionable outcomes", "Informed growth"].map(x => <li key={x} className="flex items-center gap-2"><span aria-hidden="true" className="text-xl font-bold text-black">✔</span>{x}</li>)}</ul>
             </div>
           </div>
         </div>
