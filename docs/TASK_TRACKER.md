@@ -2,7 +2,7 @@
 
 ## Current status
 
-Next.js starter initialization, frontend preparation, header implementation, and homepage hero implementation are complete. Stop and wait for project-owner review before starting another task. Further business implementation, remote setup, and production changes are not authorized by this tracker.
+Next.js starter initialization, frontend preparation, header, hero, and the remaining homepage sections are implemented. Homepage visual and interaction review is pending. Stop and wait for project-owner review before starting another task. Remote setup and production changes are not authorized by this tracker.
 
 | Phase / task | Status | Evidence or next action |
 | --- | --- | --- |
@@ -15,6 +15,7 @@ Next.js starter initialization, frontend preparation, header implementation, and
 | Phase 3 Step 3.2B — responsive header | Implemented; review pending | Logo, navigation, call button, and responsive menu added; lint and build passed. Browser accessibility and visual review remain pending. |
 | Phase 3 Step 3.3C — recover hero assets | Completed | Three original images downloaded and verified; hero implementation awaits approval. |
 | Phase 3 Step 3.3D — homepage hero | Implemented; review pending | Original local assets, responsive layout, and links added; lint and build passed. Browser visual checks remain pending. |
+| Phase 3 Step 3.4 — remaining homepage | Implemented; review pending | Added saved homepage sections, local assets, native FAQ disclosures, and disabled enquiry form. Browser and route review remain pending. |
 | Git and GitHub setup | Pending approval | No automatic commits, pushes, or remote setup. |
 | Frontend implementation | Pending approval | Faithful reproduction after references and scope are agreed. |
 | WordPress content and SEO integration | Pending approval | Inspect actual responses and agree mapping and refresh behavior. |
@@ -80,3 +81,11 @@ Await the project owner's next approved task. Hosting/routing, CMS URL arrangeme
 - Replaced the placeholder with a responsive hero using the recovered local images, CSS circle, SVG About Us link, supplied content, and contact CTA. Header remains unchanged.
 - `npm run lint` and `npm run build` passed; all three image paths exist locally. Browser preview was unavailable, so desktop, tablet, mobile, breakpoint, and visual-fidelity checks remain pending.
 - The responsive grid avoids the original Elementor transforms; exact positioning, crop, and typography require visual review. No dependencies or production changes were made.
+
+## Phase 3 Step 3.4 — remaining homepage
+
+- Implemented process, metrics, About Us, services, CEO, client logos, testimonials, six saved blog entries, recruitment CTA, quote form, FAQ groups, and footer. The existing header and hero were preserved.
+- Copied 24 reference images into `public/images/home/`; the existing hero assets and logo remain in use. The saved testimonial markup includes one invalid avatar URL, so testimonial avatars were not reproduced. The WhatsApp widget destination could not be verified and was not added.
+- The quote form is disabled and provides the existing phone number as an alternative. No submission integration is implemented.
+- `npm run lint` and `npm run build` passed. The generated HTML contains 17 FAQ disclosures and a disabled fieldset; all referenced home image files exist. Browser testing was unavailable, so responsive rendering, FAQ interaction, horizontal scrolling, and visual fidelity remain unverified.
+- Blog and other internal routes are preserved from the reference but their pages do not exist locally yet. Client logos and testimonials use keyboard-focusable horizontal scrolling rather than the original automated widgets. Further visual comparison, image/asset review, routing, and form integration require follow-up.
