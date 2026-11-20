@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { clientLogos, faqs, posts, processes, services } from "./homeContent";
+import { clientLogos, posts, processes, services } from "./homeContent";
+import FaqSections from "./FaqSections";
 import TestimonialsCarousel from "./TestimonialsCarousel";
 import "./ClientsMarquee.css";
 
@@ -125,7 +126,7 @@ export default function HomeSections() {
         </div>
       </section>
 
-      <section aria-labelledby="faq-heading" className="bg-[#f8f8f8] py-16 md:py-20"><div className={wrap}><h2 id="faq-heading" className={heading}>FAQ</h2><div className="mt-8 grid gap-8 lg:grid-cols-3">{faqs.map(group => <div key={group.group}><h3 className="mb-4 text-2xl font-semibold">{group.group}</h3>{group.entries.map(([question, answer]) => <details key={question} className="border-b border-gray-300 bg-white"><summary className="cursor-pointer px-4 py-4 font-medium focus-visible:outline-2 focus-visible:outline-[#b61a00]">{question}</summary><p className="px-4 pb-4 leading-relaxed">{answer}</p></details>)}</div>)}</div></div></section>
+      <FaqSections />
     </>
   );
 }

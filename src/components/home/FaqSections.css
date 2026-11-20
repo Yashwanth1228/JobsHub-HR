@@ -1,0 +1,25 @@
+.homepage-faq { overflow: hidden; background: #fff; color: #313131; }
+.homepage-faq-inner { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 60px; max-width: 1200px; margin: 0 auto; padding: 40px 30px; }
+.homepage-faq-content { min-width: 0; }
+.homepage-faq-label { font-size: 33px; font-weight: 400; line-height: 1.2; }
+.homepage-faq-content h2 { margin-top: 8px; font-size: 28px; font-weight: 500; line-height: 1.2; }
+.homepage-faq-list { margin-top: 24px; }
+.homepage-faq-list details { margin-bottom: 15px; }
+.homepage-faq-list summary { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 15px; border: 1px solid #252525; cursor: pointer; list-style: none; }
+.homepage-faq-list summary::-webkit-details-marker { display: none; }
+.homepage-faq-list summary:focus-visible { outline: 3px solid #b61a00; outline-offset: 3px; }
+.homepage-faq-list details[open] summary { background: #b61a00; color: white; }
+.homepage-faq-list details > p { padding: 16px 20px 24px; line-height: 1.55; color: #111; }
+.homepage-faq-icon { position: relative; flex: 0 0 14px; width: 14px; height: 14px; color: #b61a00; }
+.homepage-faq-icon::before, .homepage-faq-icon::after { position: absolute; top: 6px; left: 1px; width: 12px; height: 2px; background: currentColor; content: ""; }
+.homepage-faq-icon::after { transform: rotate(90deg); }
+.homepage-faq-list details[open] .homepage-faq-icon { color: white; }
+.homepage-faq-list details[open] .homepage-faq-icon::after { display: none; }
+.homepage-faq-images { position: relative; display: grid; gap: 30px; min-width: 0; padding: 45px 0; }
+.homepage-faq-images-yellow::before { position: absolute; z-index: 0; inset: 0 -50vw 0 35%; background: #ffe993; content: ""; }
+.homepage-faq-image { position: relative; z-index: 1; width: 90%; height: 150px; overflow: hidden; border-radius: 10px; }
+.homepage-faq-image:nth-child(2) { justify-self: end; }
+.homepage-faq-reversed .homepage-faq-content { grid-column: 2; grid-row: 1; }
+.homepage-faq-reversed .homepage-faq-images { grid-column: 1; grid-row: 1; }
+@media (max-width: 1024px) { .homepage-faq-inner { gap: 30px; padding-inline: 24px; } .homepage-faq-image { height: 130px; } }
+@media (max-width: 767px) { .homepage-faq-inner { grid-template-columns: minmax(0, 1fr); gap: 20px; padding: 36px 24px; } .homepage-faq-reversed .homepage-faq-content, .homepage-faq-reversed .homepage-faq-images { grid-column: auto; grid-row: auto; } .homepage-faq-label { font-size: 30px; } .homepage-faq-content h2 { font-size: 25px; } .homepage-faq-images { gap: 18px; padding: 24px 0; } .homepage-faq-image { height: clamp(120px, 35vw, 180px); } }
