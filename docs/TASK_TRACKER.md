@@ -2,6 +2,8 @@
 
 ## Current status
 
+Restored the three saved WordPress paragraphs after the homepage FAQ; exact wording, lint, and build verified.
+
 FAQ redesign: implemented with three responsive accordion sections and original images; lint and build passed. Browser visual and interaction review remains pending.
 
 Next.js starter initialization, frontend preparation, header, hero, and the remaining homepage sections are implemented. Homepage visual and interaction review is pending. Stop and wait for project-owner review before starting another task. Remote setup and production changes are not authorized by this tracker.

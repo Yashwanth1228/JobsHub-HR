@@ -127,6 +127,13 @@ export default function HomeSections() {
       </section>
 
       <FaqSections />
+      <section className="bg-white py-5">
+        <div className="mx-auto max-w-[1200px] space-y-4 px-6 text-base leading-6 font-normal text-[#313131] md:px-[30px]">
+          <p>As a top recruitment agency in Bangalore, we focus on connecting businesses with the right talent at the right time. Companies across different industries trust us because we understand their needs and deliver results. Over the years, we have also become known as the top recruitment agency in Bangalore for the retail industry, helping stores and brands hire professionals who can manage sales, customer service, and operations with ease.</p>
+          <p>In addition, our role as a top manpower consultant allows us to provide both permanent and temporary staffing support. We also serve as a manufacturing units employment agency in Bangalore, supplying skilled workers, supervisors, and technicians who keep production running smoothly.</p>
+          <p>Many organizations regard us as the best recruitment agency in Bangalore because of our transparent process and reliable service. At the same time, as an HR agency for the healthcare industry, we help hospitals and clinics find doctors, nurses, and support staff who ensure quality patient care.</p>
+        </div>
+      </section>
     </>
   );
 }
