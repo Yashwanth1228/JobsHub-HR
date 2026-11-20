@@ -101,7 +101,29 @@ export default function HomeSections() {
         </div>
       </section>
 
-      <section aria-labelledby="contact-heading" className="py-16 md:py-20"><div className={`${wrap} grid gap-10 md:grid-cols-2`}><div><h2 id="contact-heading" className={heading}>Contact our recruitment agency for hr professionals</h2><p className="mt-4 leading-relaxed">Find the Perfect employees with JOBSHUB HR, the best HR consultancy service provider in India.</p><p className="mt-5">Call us now <a className="text-[#b61a00] underline" href="tel:+919740943402">+919740943402</a></p></div><div className="rounded-[20px] border border-[#b61a00] p-6"><h3 className="text-2xl font-semibold">Get a quote</h3><form className="mt-5"><fieldset disabled className="grid gap-4"><label>Business Email <span aria-hidden="true">*</span><input type="email" name="email" required className="mt-1 block w-full rounded border border-gray-400 p-3" /></label><label>Full Name<input type="text" name="name" className="mt-1 block w-full rounded border border-gray-400 p-3" /></label><label>Share why you are contacting<textarea name="message" rows={4} className="mt-1 block w-full rounded border border-gray-400 p-3" /></label><button type="button" disabled className="w-fit cursor-not-allowed rounded-full bg-gray-500 px-8 py-3 text-white">Submit</button></fieldset><p className="mt-4 text-sm">Online submissions are not yet available. Please call us using the number above.</p></form></div></div></section>
+      <section aria-labelledby="contact-heading" className="py-10 md:pt-12 md:pb-5">
+        <div className="mx-auto grid max-w-[1200px] items-center gap-10 px-6 md:grid-cols-[minmax(0,1fr)_minmax(0,1.08fr)] md:gap-10 md:px-8">
+          <div className="min-w-0">
+            <h2 id="contact-heading" className="text-3xl leading-tight font-medium text-[#313131] md:text-[33px]">Contact our recruitment agency for hr professionals</h2>
+            <p className="mt-7 leading-relaxed">Find the Perfect employees with JOBSHUB HR, the best HR consultancy service provider in India.</p>
+            <a href="tel:+919740943402" className="mt-8 inline-flex items-center gap-[15px] rounded-[10px] bg-[#b61a00] px-[25px] py-[15px] text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#b61a00]">
+              <svg aria-hidden="true" viewBox="0 0 32 32" className="h-10 w-10 shrink-0" fill="none"><path fill="currentColor" d="M8.6 3.6 11.4 3l2.1 6-2.4 1.8a20 20 0 0 0 5.9 5.9l1.8-2.4 6 2.1-.6 2.8c-.4 1.8-2.1 3-3.9 2.7C12 20.5 5.5 14 4.9 7.5c-.2-1.8 1-3.5 3.7-3.9Z"/><path d="M20 5.5a6 6 0 0 1 4.5 6M22.5 2.5a10 10 0 0 1 5 9.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
+              <span><span className="block">Call us now</span><span className="block">+919740943402</span></span>
+            </a>
+          </div>
+          <div className="min-w-0 rounded-[25px] border border-[#313131] p-6 sm:p-10 lg:p-[60px]">
+            <div role="form" aria-label="Get a quote" aria-describedby="quote-unavailable">
+              <fieldset className="grid gap-5">
+                <label><span className="sr-only">Business Email (required)</span><input type="email" name="email" placeholder="Business Email" required className="block h-[42px] w-full rounded-[10px] border border-[#777] bg-white px-3 placeholder:text-[#666] placeholder:opacity-100" /></label>
+                <label><span className="sr-only">Full Name</span><input type="text" name="name" placeholder="Full Name" className="block h-[42px] w-full rounded-[10px] border border-[#777] bg-white px-3 placeholder:text-[#666] placeholder:opacity-100" /></label>
+                <label><span className="sr-only">Share why you are contacting</span><textarea name="message" rows={4} placeholder="Share why you are contacting" className="block h-[112px] w-full rounded-[10px] border border-[#777] bg-white p-3 placeholder:text-[#666] placeholder:opacity-100" /></label>
+                <button type="button" disabled className="h-[40px] w-full cursor-not-allowed rounded-[3px] bg-[#b61a00] px-6 text-black sm:w-1/2">Get a quote</button>
+              </fieldset>
+              <p id="quote-unavailable" className="sr-only">Online submissions are not yet available. Please call us using the number above.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section aria-labelledby="faq-heading" className="bg-[#f8f8f8] py-16 md:py-20"><div className={wrap}><h2 id="faq-heading" className={heading}>FAQ</h2><div className="mt-8 grid gap-8 lg:grid-cols-3">{faqs.map(group => <div key={group.group}><h3 className="mb-4 text-2xl font-semibold">{group.group}</h3>{group.entries.map(([question, answer]) => <details key={question} className="border-b border-gray-300 bg-white"><summary className="cursor-pointer px-4 py-4 font-medium focus-visible:outline-2 focus-visible:outline-[#b61a00]">{question}</summary><p className="px-4 pb-4 leading-relaxed">{answer}</p></details>)}</div>)}</div></div></section>
     </>
