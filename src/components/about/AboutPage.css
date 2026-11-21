@@ -1,0 +1,35 @@
+.about-wrap { width: 100%; max-width: 1200px; margin-inline: auto; padding-inline: 30px; }
+.about-banner { position: relative; min-height: 300px; display: flex; align-items: center; border-bottom: 20px solid #b61a00; background: #fff; color: #313131; overflow: hidden; }
+.about-banner::before, .about-banner::after { position: absolute; content: ""; pointer-events: none; background-repeat: no-repeat; background-position: center; }
+.about-banner::before { inset: 0 auto 0 0; width: 180px; background-image: url('/images/hero/shape-3.png'); background-size: 180px; opacity: .05; }
+.about-banner::after { inset: 0 0 0 auto; width: 80px; background-image: url('/images/about/shape-2.png'); background-size: 80px; opacity: .1; }
+.about-banner-inner { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.about-banner h1 { color: #b61a00; font-family: Roboto, Arial, sans-serif; font-size: 40px; font-weight: 600; line-height: 1.2; }
+.about-banner nav { display: flex; align-items: center; gap: 10px; margin-top: 18px; color: #b61a00; font-family: Roboto, Arial, sans-serif; font-size: 16px; font-weight: 500; }
+.about-banner nav a:hover { text-decoration: underline; }
+.about-banner-inner > p { width: 46%; min-width: 0; color: #313131; font-family: Roboto, Arial, sans-serif; font-size: 32px; font-weight: 600; line-height: 1; }
+.about-introduction { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: 90px; margin-top: 50px; }
+.about-intro-image { position: relative; min-height: 500px; overflow: hidden; border-radius: 10px; }
+.about-intro-image img { object-fit: cover; object-position: center; }
+.about-intro-copy h2, .about-values h2, .about-team h2 { margin-top: 8px; font-size: 40px; font-weight: 500; line-height: 1.2; letter-spacing: -2px; }
+.about-label { font-size: 32px; line-height: 1.2; font-weight: 400; }
+.about-intro-copy > p:last-child { margin-top: 24px; line-height: 1.6; }
+.about-values { position: relative; margin-top: 50px; padding: 50px 0 30px; background: #fff; }
+.about-values::before { position: absolute; inset: 0; content: ""; pointer-events: none; background: url('/images/home/Pattern-2-Convertido.png') center / 50% repeat; opacity: .1; }
+.about-values .about-wrap { position: relative; }
+.about-values-heading { text-align: center; }
+.about-values-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; margin-top: 40px; }
+.about-value { min-width: 0; }
+.about-number { margin-bottom: 15px; font-size: 28px; color: #b61a00; }
+.about-value-image { width: 100%; height: auto; aspect-ratio: 1.5; object-fit: cover; border-radius: 10px; }
+.about-value h3 { margin-top: 20px; font-size: 25px; font-weight: 500; }
+.about-value > p:last-child { margin-top: 14px; line-height: 1.6; }
+.about-team { padding-top: 70px; padding-bottom: 90px; }
+.about-team-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 60px; margin-top: 40px; }
+.about-team-card { min-width: 0; }
+.about-team-card h3 { padding: 15px; font-size: 20px; font-weight: 500; }
+.about-team-image { position: relative; height: 250px; overflow: hidden; border-radius: 0 0 10px 10px; }
+.about-team-image img { object-fit: cover; object-position: top center; }
+.about-team-mobile-name { display: none; }
+@media (max-width: 1024px) { .about-banner-inner > p { font-size: 26px; line-height: 1.15; } .about-introduction { gap: 29px; } .about-intro-copy h2, .about-values h2, .about-team h2 { font-size: 33.18px; } .about-team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; } }
+@media (max-width: 767px) { .about-wrap { padding-inline: 24px; } .about-banner-inner { align-items: flex-start; flex-direction: column; gap: 20px; padding-block: 35px; } .about-banner h1 { font-size: 30px; } .about-banner-inner > p { width: 100%; font-size: 20px; line-height: 1.2; } .about-introduction { display: flex; flex-direction: column-reverse; gap: 29px; } .about-intro-image { width: 100%; min-height: 350px; } .about-intro-copy h2, .about-values h2, .about-team h2 { font-size: 18px; letter-spacing: .3px; } .about-label { font-size: 28px; } .about-values-grid { grid-template-columns: minmax(0, 1fr); } .about-team { padding-top: 50px; padding-bottom: 60px; } .about-team header { text-align: center; } .about-team-grid { grid-template-columns: minmax(0, 1fr); } .about-team-card { display: flex; flex-direction: column-reverse; } .about-team-card h3 { padding: 15px 0; } .about-team-image { height: auto; aspect-ratio: 4 / 5; border-radius: 10px; } .about-team-image img { object-fit: contain; } .about-team-desktop-name { display: none; } .about-team-mobile-name { display: inline; } }

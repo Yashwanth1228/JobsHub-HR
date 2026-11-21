@@ -2,6 +2,8 @@
 
 ## Current status
 
+About Us page: initial implementation completed using saved WordPress content and original assets; lint, build, and route response passed. Desktop, tablet, and mobile visual review remains pending.
+
 Restored the three saved WordPress paragraphs after the homepage FAQ; exact wording, lint, and build verified.
 
 FAQ redesign: implemented with three responsive accordion sections and original images; lint and build passed. Browser visual and interaction review remains pending.
