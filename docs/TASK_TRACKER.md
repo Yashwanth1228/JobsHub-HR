@@ -2,6 +2,8 @@
 
 ## Current status
 
+Services page: initial implementation completed using the saved WordPress content and existing decorative assets; lint, build, and route response passed. Browser visual and responsive review remains pending.
+
 About Us page: initial implementation completed using saved WordPress content and original assets; lint, build, and route response passed. Desktop, tablet, and mobile visual review remains pending.
 
 Restored the three saved WordPress paragraphs after the homepage FAQ; exact wording, lint, and build verified.
