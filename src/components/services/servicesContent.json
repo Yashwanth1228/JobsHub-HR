@@ -18,12 +18,53 @@
                            "type":  "list",
                            "inline":  false,
                            "items":  [
-                                         "Stability and continuity : Permanent employees provide a stable and consistent time, increasing turnover and providing continuity in the organization’s operations.",
-                                         "Loyal and committed : Permanent employees tend to be more loyal and committed to the organization, which can result in increased productivity and better job performance. Permanent employees keep learning new things as per new generation, so you can save money in the training and development process. Organizations can also save their energy and time on training and development processes.",
-                                         "Develop a clear job description : A clebar and concise job description will help attract the right candidates for the position.",
-                                         "Offer competitive compensation and benefits : Offer competitive compensation and benefits packages to attract and retain top talent. Provide opportunities for career growth and development: Invest in the training and development of permanent employees to improve job performance and job satisfaction.",
-                                         "Create a positive work environment : Foster a positive work environment that promotes employee engagement and job satisfaction. Regularly review and adjust employee compensation and benefits: Regularly review employee compensation and benefits to ensure they remain stagnant."
-                                     ]
+                                         {
+                                             "text":  "Stability and continuity : Permanent employees provide a stable and consistent time, increasing turnover and providing continuity in the organization’s operations.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  24
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Loyal and committed : Permanent employees tend to be more loyal and committed to the organization, which can result in increased productivity and better job performance. Permanent employees keep learning new things as per new generation, so you can save money in the training and development process. Organizations can also save their energy and time on training and development processes.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  19
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Develop a clear job description : A clebar and concise job description will help attract the right candidates for the position.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  31
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Offer competitive compensation and benefits : Offer competitive compensation and benefits packages to attract and retain top talent. Provide opportunities for career growth and development: Invest in the training and development of permanent employees to improve job performance and job satisfaction.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  43
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Create a positive work environment : Foster a positive work environment that promotes employee engagement and job satisfaction. Regularly review and adjust employee compensation and benefits: Regularly review employee compensation and benefits to ensure they remain stagnant.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  34
+                                                          }
+                                                      ]
+                                         }
+                                     ],
+                           "icon":  "check"
                        }
                    ]
     },
@@ -50,12 +91,53 @@
                            "type":  "list",
                            "inline":  false,
                            "items":  [
-                                         "Quick Turnaround Time : We understand that time is money. Our extensive talent pool enables us to fill temporary positions within hours.",
-                                         "Pre-Screened Candidates : All our temporary staff undergo a thorough screening process to ensure they meet your standards from day one.",
-                                         "Industry-Specific Expertise : From admin and customer service to all Non IT and healthcare, we match candidates based on your industry and job requirements.",
-                                         "Scalable Solutions : Need one person or an entire team. We JOBSHUB HR can scale up or down based on your workload and budget.",
-                                         "Cost-Effective Staffing : Save on recruitment, training, and employee benefits."
-                                     ]
+                                         {
+                                             "text":  "Quick Turnaround Time : We understand that time is money. Our extensive talent pool enables us to fill temporary positions within hours.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  23
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Pre-Screened Candidates : All our temporary staff undergo a thorough screening process to ensure they meet your standards from day one.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  23
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Industry-Specific Expertise : From admin and customer service to all Non IT and healthcare, we match candidates based on your industry and job requirements.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  27
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Scalable Solutions : Need one person or an entire team. We JOBSHUB HR can scale up or down based on your workload and budget.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  18
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Cost-Effective Staffing : Save on recruitment, training, and employee benefits.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  23
+                                                          }
+                                                      ]
+                                         }
+                                     ],
+                           "icon":  "check"
                        },
                        {
                            "type":  "heading",
@@ -65,11 +147,44 @@
                            "type":  "list",
                            "inline":  false,
                            "items":  [
-                                         "Consultation : We understand your business needs, culture, and staffing goals.",
-                                         "Candidate Selection : We identify top talent from our database or custom recruit for niche roles.",
-                                         "Placement : Seamless onboarding and integration into your team.",
-                                         "Ongoing Support : We monitor performance and provide replacements if needed."
-                                     ]
+                                         {
+                                             "text":  "Consultation : We understand your business needs, culture, and staffing goals.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  14
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Candidate Selection : We identify top talent from our database or custom recruit for niche roles.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  21
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Placement : Seamless onboarding and integration into your team.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  11
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Ongoing Support : We monitor performance and provide replacements if needed.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  17
+                                                          }
+                                                      ]
+                                         }
+                                     ],
+                           "icon":  "circle"
                        },
                        {
                            "type":  "heading",
@@ -79,12 +194,38 @@
                            "type":  "list",
                            "inline":  true,
                            "items":  [
-                                         "Retail \u0026 E-commerce",
-                                         "Healthcare \u0026 Hospitals",
-                                         "Manufacturing \u0026 Logistics",
-                                         "Finance \u0026 Accounting",
-                                         "Customer Support \u0026 Admin Roles"
-                                     ]
+                                         {
+                                             "text":  "Retail \u0026 E-commerce",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Healthcare \u0026 Hospitals",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Manufacturing \u0026 Logistics",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Finance \u0026 Accounting",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Customer Support \u0026 Admin Roles",
+                                             "bold":  [
+
+                                                      ]
+                                         }
+                                     ],
+                           "icon":  "circle"
                        }
                    ]
     },
@@ -111,14 +252,71 @@
                            "type":  "list",
                            "inline":  false,
                            "items":  [
-                                         "Educational Qualifications: Verification of degrees, certificates, and institutions attended.",
-                                         "Employment History : Confirmation of previous job roles, tenure, and reasons for leaving.",
-                                         "Criminal Records Check : Screening for any criminal background across national and local databases.",
-                                         "Identity Verification : Authentication of identity using official documents like Aadhaar, PAN, Passport, etc.",
-                                         "Address Verification : Physical and document-based verification of permanent and current address.",
-                                         "Reference Checks : Professional reference validation from past employers or managers.",
-                                         "Social Media Screening (Optional) : Assessing public social media presence for potential red flags."
-                                     ]
+                                         {
+                                             "text":  "Educational Qualifications: Verification of degrees, certificates, and institutions attended.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  27
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Employment History : Confirmation of previous job roles, tenure, and reasons for leaving.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  20
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Criminal Records Check : Screening for any criminal background across national and local databases.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  24
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Identity Verification : Authentication of identity using official documents like Aadhaar, PAN, Passport, etc.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  23
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Address Verification : Physical and document-based verification of permanent and current address.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  22
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Reference Checks : Professional reference validation from past employers or managers.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  18
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Social Media Screening (Optional) : Assessing public social media presence for potential red flags.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  35
+                                                          }
+                                                      ]
+                                         }
+                                     ],
+                           "icon":  "circle"
                        },
                        {
                            "type":  "heading",
@@ -128,11 +326,32 @@
                            "type":  "list",
                            "inline":  false,
                            "items":  [
-                                         "Consent-Based Checks – Fully compliant with legal and ethical standards.",
-                                         "Fast Turnaround – Most verifications completed within 3–7 business days.",
-                                         "Secure \u0026 Confidential – Your data is safe with us, protected by strict confidentiality policies.",
-                                         "Tailored Packages – Customizable to your industry, role type, and company policy."
-                                     ]
+                                         {
+                                             "text":  "Consent-Based Checks – Fully compliant with legal and ethical standards.",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Fast Turnaround – Most verifications completed within 3–7 business days.",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Secure \u0026 Confidential – Your data is safe with us, protected by strict confidentiality policies.",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Tailored Packages – Customizable to your industry, role type, and company policy.",
+                                             "bold":  [
+
+                                                      ]
+                                         }
+                                     ],
+                           "icon":  "check"
                        },
                        {
                            "type":  "heading",
@@ -159,12 +378,53 @@
                            "type":  "list",
                            "inline":  false,
                            "items":  [
-                                         "Permanent Staffing: We help you find and onboard the right candidates who are not only qualified but also culturally aligned with your organization. Our recruitment process ensures long-term success for both employer and employee.",
-                                         "Our Staffing: Looking for flexible workforce solutions? Our staffing services allow you to scale your team based on project demands.",
-                                         "Bulk Hiring: For companies looking to hire at scale, our bulk recruitment services are designed to deliver high-volume hiring without compromising quality. We use data-driven screening techniques to ensure you get the best candidates fast.",
-                                         "Skilled and Unskilled Labor Supply: From factory workers to construction laborers, we supply both skilled and unskilled manpower to meet operational demands across sectors like manufacturing, logistics, infrastructure, retail, and more.",
-                                         "Industry-Specific Manpower Solutions: We provide specialized manpower services tailored to sectors such as Non IT, healthcare, electrical, mechanical engineering, finance, hospitality, and more. Our recruiters understand your industry’s unique needs and deliver accordingly."
-                                     ]
+                                         {
+                                             "text":  "Permanent Staffing: We help you find and onboard the right candidates who are not only qualified but also culturally aligned with your organization. Our recruitment process ensures long-term success for both employer and employee.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  19
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Our Staffing: Looking for flexible workforce solutions? Our staffing services allow you to scale your team based on project demands.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  13
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Bulk Hiring: For companies looking to hire at scale, our bulk recruitment services are designed to deliver high-volume hiring without compromising quality. We use data-driven screening techniques to ensure you get the best candidates fast.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  12
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Skilled and Unskilled Labor Supply: From factory workers to construction laborers, we supply both skilled and unskilled manpower to meet operational demands across sectors like manufacturing, logistics, infrastructure, retail, and more.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  35
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Industry-Specific Manpower Solutions: We provide specialized manpower services tailored to sectors such as Non IT, healthcare, electrical, mechanical engineering, finance, hospitality, and more. Our recruiters understand your industry’s unique needs and deliver accordingly.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  37
+                                                          }
+                                                      ]
+                                         }
+                                     ],
+                           "icon":  "circle"
                        },
                        {
                            "type":  "heading",
@@ -174,11 +434,32 @@
                            "type":  "list",
                            "inline":  false,
                            "items":  [
-                                         "Vast Talent Pool : Access to a large database of pre-screened and verified candidates.",
-                                         "Faster Turnaround Time : Quick response to your staffing needs with minimal lead time.",
-                                         "End-to-End Support : From sourcing and onboarding to compliance and retention, we handle it all.",
-                                         "Pan-India Reach : Our network spans across cities, ensuring manpower availability wherever you are."
-                                     ]
+                                         {
+                                             "text":  "Vast Talent Pool : Access to a large database of pre-screened and verified candidates.",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Faster Turnaround Time : Quick response to your staffing needs with minimal lead time.",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "End-to-End Support : From sourcing and onboarding to compliance and retention, we handle it all.",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Pan-India Reach : Our network spans across cities, ensuring manpower availability wherever you are.",
+                                             "bold":  [
+
+                                                      ]
+                                         }
+                                     ],
+                           "icon":  "check"
                        }
                    ]
     },
@@ -197,12 +478,53 @@
                            "type":  "list",
                            "inline":  false,
                            "items":  [
-                                         "Permanent Staffing: We connect you with skilled and reliable professionals who are aligned with your company\u0027s culture and long-term vision. Our thorough screening and assessment process ensures you hire candidates who can contribute from day one.",
-                                         "Staffing : Need workforce flexibility We provide qualified contract-based employees for specific projects or seasonal demands — without compromising on quality.",
-                                         "Bulk Hiring \u0026 Blue-Collar few Recruitment: For roles in manufacturing, warehouse operations, delivery services, and facility management, we offer end-to-end bulk hiring services, including sourcing, shortlisting, onboarding, and training.",
-                                         "Skilled \u0026 Semi-Skilled Workforce Placement: Whether you require machine operators, electricians, technicians, or helpers, we supply trained manpower that meets your technical and productivity standards.",
-                                         "Support: Our staffing solutions come with full staffing support."
-                                     ]
+                                         {
+                                             "text":  "Permanent Staffing: We connect you with skilled and reliable professionals who are aligned with your company\u0027s culture and long-term vision. Our thorough screening and assessment process ensures you hire candidates who can contribute from day one.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  19
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Staffing : Need workforce flexibility We provide qualified contract-based employees for specific projects or seasonal demands — without compromising on quality.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  10
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Bulk Hiring \u0026 Blue-Collar few Recruitment: For roles in manufacturing, warehouse operations, delivery services, and facility management, we offer end-to-end bulk hiring services, including sourcing, shortlisting, onboarding, and training.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  42
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Skilled \u0026 Semi-Skilled Workforce Placement: Whether you require machine operators, electricians, technicians, or helpers, we supply trained manpower that meets your technical and productivity standards.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  43
+                                                          }
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Support: Our staffing solutions come with full staffing support.",
+                                             "bold":  [
+                                                          {
+                                                              "start":  0,
+                                                              "end":  8
+                                                          }
+                                                      ]
+                                         }
+                                     ],
+                           "icon":  "circle"
                        },
                        {
                            "type":  "heading",
@@ -212,14 +534,50 @@
                            "type":  "list",
                            "inline":  false,
                            "items":  [
-                                         "Manufacturing \u0026 Engineering",
-                                         "FMCG \u0026 Retail",
-                                         "Logistics \u0026 Warehousing",
-                                         "Construction \u0026 Infrastructure",
-                                         "Hospitality \u0026 Healthcare",
-                                         "Automobile \u0026 Ancillary",
-                                         "Agriculture \u0026 Food Processing"
-                                     ]
+                                         {
+                                             "text":  "Manufacturing \u0026 Engineering",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "FMCG \u0026 Retail",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Logistics \u0026 Warehousing",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Construction \u0026 Infrastructure",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Hospitality \u0026 Healthcare",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Automobile \u0026 Ancillary",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "Agriculture \u0026 Food Processing",
+                                             "bold":  [
+
+                                                      ]
+                                         }
+                                     ],
+                           "icon":  "check"
                        },
                        {
                            "type":  "heading",
@@ -229,12 +587,38 @@
                            "type":  "list",
                            "inline":  true,
                            "items":  [
-                                         "✅ Industry-Specific Talent Pool",
-                                         "✅ Fast Turnaround Time",
-                                         "✅ 100% reliable",
-                                         "✅ Transparent \u0026 Customized Hiring Process",
-                                         "✅ Pan-India Network"
-                                     ]
+                                         {
+                                             "text":  "✅ Industry-Specific Talent Pool",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "✅ Fast Turnaround Time",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "✅ 100% reliable",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "✅ Transparent \u0026 Customized Hiring Process",
+                                             "bold":  [
+
+                                                      ]
+                                         },
+                                         {
+                                             "text":  "✅ Pan-India Network",
+                                             "bold":  [
+
+                                                      ]
+                                         }
+                                     ],
+                           "icon":  "none"
                        }
                    ]
     }
