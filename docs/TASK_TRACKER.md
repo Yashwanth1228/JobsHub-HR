@@ -144,3 +144,9 @@ Await the project owner's next approved task. Hosting/routing, CMS URL arrangeme
 - The existing Turbopack CSS loader emitted the CSS module as ordinary CSS, leaving its imported class mappings undefined in the rendered HTML. Replaced it with uniquely named CSS classes and explicit non-wrapping flex rows.
 - The rebuilt HTML contains the named viewport and track, two logo groups and 28 logo instances, with no undefined classes. CSS moves the equal groups left by half the track width; reduced motion disables animation and permits keyboard scrolling through one row.
 - `npm run lint` and `npm run build` passed. Browser verification of layout, seam, motion, scrollbar, and responsive behavior remains pending.
+
+## Blog listing — Phase 2
+
+- Added the original blog listing route with server-side WordPress posts, 300-second revalidation, featured images, and a progressive Load More link.
+- Verified the production build returns 21 cards initially and 27 after Load More with the current WordPress data. Individual article routes remain pending.
+- Lint and build passed. Browser screenshot comparison and responsive visual checks remain pending.
