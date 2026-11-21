@@ -150,3 +150,9 @@ Await the project owner's next approved task. Hosting/routing, CMS URL arrangeme
 - Added the original blog listing route with server-side WordPress posts, 300-second revalidation, featured images, and a progressive Load More link.
 - Verified the production build returns 21 cards initially and 27 after Load More with the current WordPress data. Individual article routes remain pending.
 - Lint and build passed. Browser screenshot comparison and responsive visual checks remain pending.
+
+## Contact Us — Phase 2
+
+- Added the Contact Us route with the reference contact information, five office locations, and original public Google Maps iframe URLs.
+- The enquiry fields are editable, but Send is disabled until an approved submission integration is implemented.
+- Lint and build passed; the production route returned HTTP 200 with five map iframes. Browser visual, map rendering, and responsive checks remain pending. The WhatsApp destination is unverified.
