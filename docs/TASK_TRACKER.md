@@ -153,6 +153,7 @@ Await the project owner's next approved task. Hosting/routing, CMS URL arrangeme
 
 ## Contact Us — Phase 2
 
+- Refined office typography, reference SVG icons, spacing, and map iframe sizing. Lint and build passed; browser comparison and map rendering remain pending.
 - Added the Contact Us route with the reference contact information, five office locations, and original public Google Maps iframe URLs.
 - The enquiry fields are editable, but Send is disabled until an approved submission integration is implemented.
 - Lint and build passed; the production route returned HTTP 200 with five map iframes. Browser visual, map rendering, and responsive checks remain pending. The WhatsApp destination is unverified.
