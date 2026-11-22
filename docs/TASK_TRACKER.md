@@ -153,6 +153,8 @@ Await the project owner's next approved task. Hosting/routing, CMS URL arrangeme
 
 ## Contact Us — Phase 2
 
+- Matched the WhatsApp launcher's saved gradient and dimensions, refined popup transitions, and reserved footer space for the control. Lint and build passed; browser animation and responsive comparison remain pending.
+- Added a single shared WhatsApp popup; the destination matches the saved WordPress Click to Chat configuration. Lint and build passed and generated pages each contain one widget; browser interaction and responsive checks remain pending.
 - Refined office typography, reference SVG icons, spacing, and map iframe sizing. Lint and build passed; browser comparison and map rendering remain pending.
 - Added the Contact Us route with the reference contact information, five office locations, and original public Google Maps iframe URLs.
 - The enquiry fields are editable, but Send is disabled until an approved submission integration is implemented.
