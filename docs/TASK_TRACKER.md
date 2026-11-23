@@ -147,6 +147,7 @@ Await the project owner's next approved task. Hosting/routing, CMS URL arrangeme
 
 ## Blog listing — Phase 2
 
+- Phase 3A: added published root-level article lookup, server-side HTML sanitization, Yoast metadata mapping and pre-stream 404/503 handling. Category/tag archives and `/home-page/` remain undecided; browser visual and SEO verification are pending.
 - Added the original blog listing route with server-side WordPress posts, 300-second revalidation, featured images, and a progressive Load More link.
 - Verified the production build returns 21 cards initially and 27 after Load More with the current WordPress data. Individual article routes remain pending.
 - Lint and build passed. Browser screenshot comparison and responsive visual checks remain pending.

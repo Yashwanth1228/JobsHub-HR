@@ -2,6 +2,14 @@
 
 This is a proposal for later approval, not an implemented system or a deployment decision.
 
+## Implemented article integration — Phase 3A
+
+- Published posts are resolved by exact slug at the root-level `src/app/[slug]` route; existing static routes retain precedence. Category, tag and `/home-page/` decisions remain pending. Global trailing-slash behavior is unchanged and requires migration review.
+- Server-side reads use `WORDPRESS_API_BASE_URL` when configured, otherwise the public production WordPress REST API. No credentials are required or exposed. Requests use a 10-second timeout and request 300-second revalidation; production cache behavior remains to be verified.
+- Lookup distinguishes found, confirmed missing and unavailable responses. The narrowly matched Next.js proxy checks before streaming so confirmed missing posts return HTTP 404 and unavailable upstreams return a retryable HTTP 503; this preflight can add a WordPress request and has not been benchmarked on the intended host.
+- Article body HTML is sanitized server-side with `sanitize-html`: permitted semantic text, links, images and tables are retained; scripts, event handlers, inline styles, embeds, forms, unsafe protocols and WordPress admin links are removed. Elementor classes and visual effects are not reproduced. The policy must be reviewed as new content formats are introduced.
+- Article metadata maps title, description, public canonical, robots and supported Open Graph/Twitter fields. Schema and sitemap ownership, staging indexing and complete SEO parity remain pending. Article design, accessibility and responsive browser comparison remain pending.
+
 ## Components and data flow
 
 1. Visitors access the proposed Next.js public frontend using App Router, React, JavaScript, and Tailwind CSS.

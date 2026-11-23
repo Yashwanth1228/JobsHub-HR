@@ -1,4 +1,4 @@
-const POSTS_URL = "https://jobshubhr.com/wp-json/wp/v2/posts";
+const POSTS_URL = `${(process.env.WORDPRESS_API_BASE_URL || "https://jobshubhr.com/wp-json/wp/v2").replace(/\/$/, "")}/posts`;
 const POSTS_PER_PAGE = 21;
 
 // Called only by server components. WordPress controls the published post order.

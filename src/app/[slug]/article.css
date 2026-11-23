@@ -1,0 +1,12 @@
+.article-page { background: white; color: #313131; }
+.article-container { max-width: 1000px; margin-inline: auto; padding: 60px 30px 80px; }
+.article-container h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.2; }
+.article-container time { display: block; margin-top: 16px; color: #555; }
+.article-featured { display: block; width: 100%; height: auto; margin-top: 30px; }
+.article-body { margin-top: 32px; line-height: 1.7; overflow-wrap: anywhere; }
+.article-body p, .article-body ul, .article-body ol, .article-body blockquote, .article-body figure, .article-body table { margin-block: 1em; }
+.article-body h2, .article-body h3, .article-body h4, .article-body h5, .article-body h6 { margin-block: 1em .5em; font-weight: 600; line-height: 1.25; }
+.article-body h2 { font-size: 1.75rem; }.article-body h3 { font-size: 1.4rem; }
+.article-body ul, .article-body ol { padding-left: 1.5em; }.article-body ul { list-style: disc; }.article-body ol { list-style: decimal; }
+.article-body a { color: #b61a00; text-decoration: underline; }.article-body img { max-width: 100%; height: auto; }.article-body table { display: block; max-width: 100%; overflow-x: auto; }
+@media (max-width: 767px) { .article-container { padding: 40px 24px 60px; } }
