@@ -1,5 +1,17 @@
 # Proposed architecture
 
+## Local enquiry implementation — Phase 4C/4D
+
+Local code adds a disabled-by-default `POST /api/enquiries` and an installable WordPress plugin in `wordpress-plugin/jobshubhr-enquiries/`. The existing production site and its forms have not been changed. Both Next.js forms remain disabled and the prepared submission hook is not mounted.
+
+The route checks a configured HTTPS origin, content type, body size (16 KiB), UUID v4 idempotency key, honeypot and field schema. It forwards normalized data over HTTPS using server-only WordPress application-password credentials and a 10-second timeout. It does not use the published-content client. `ENQUIRIES_ENABLED` and `ENQUIRIES_RATE_LIMIT_VERIFIED` both default to off: **no durable public rate limiter is implemented here**. A verified durable edge or equivalent rate limit is a staging and production blocker; the second flag is an operator assertion, not a rate limiter.
+
+The plugin owns a WordPress database table, not Elementor submission tables. A unique hashed idempotency key enforces one record per request; mismatched payloads conflict. The record is saved before a claimed notification attempt. Statuses are `pending`, `sending`, `failed`, and `accepted`; `accepted` only means `wp_mail()` accepted the request, not inbox delivery. Administrators can filter, inspect and manually retry pending or failed notifications. A crash in `sending` needs manual investigation; delivery may have occurred. Do not blindly resend. There is no automated alert, retry, retention/deletion policy or delivery confirmation; these are production blockers.
+
+The route returns 201 for saved and mailer-accepted, 202 for saved with another notification state, 200 on a duplicate, 409 for a changed payload, 422 for invalid data, and 503 when availability cannot be confirmed. A timeout may occur after storage: retry only with the same key and payload. A 202 is safe operationally only after a responsible person and monitoring/recovery process are agreed and verified. Enquiry content is not logged by the route.
+
+See [staging instructions](ENQUIRY_STAGING.md) for configuration, isolated tests, and rollback. Plugin PHP, WordPress database behavior, real authentication, notification delivery, and frontend browser behavior require isolated staging verification. Hosting, domain routing and production activation remain undecided.
+
 This is a proposal for later approval, not an implemented system or a deployment decision.
 
 ## Implemented article integration — Phase 3A

@@ -1,5 +1,12 @@
 # Task tracker
 
+## Phase 4C/4D — local enquiry backend
+
+- Added an opt-in Next.js enquiry endpoint, standalone WordPress plugin, private enquiry admin screen and a prepared but unused frontend submission hook. Existing forms stay disabled and live WordPress remains untouched.
+- `npm run lint`, `npm run build`, and `node --test tests/*.test.mjs` passed locally. PHP is not installed in this environment, so PHP syntax and WordPress runtime checks were not run. The first build failed on incompatible route configuration; removing those declarations resolved it.
+- A durable public rate limiter, notification monitoring/recovery, retention policy, and staging WordPress/database/mail tests are outstanding. `ENQUIRIES_RATE_LIMIT_VERIFIED` is an operator gate, not an implementation of rate limiting.
+- See `docs/ENQUIRY_STAGING.md` for staging installation and verification. Do not enable production submissions before explicit approval and acceptance.
+
 ## Current status
 
 Services page: initial implementation completed using the saved WordPress content and existing decorative assets; lint, build, and route response passed. Browser visual and responsive review remains pending.
