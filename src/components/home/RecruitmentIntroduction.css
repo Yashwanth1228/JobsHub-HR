@@ -1,0 +1,100 @@
+.recruitment-introduction {
+  background: #fff;
+  padding: 60px 30px;
+  color: #303030;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.recruitment-introduction__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  border: 1px solid #e8e2df;
+  border-radius: 20px;
+  background: #faf8f7;
+}
+
+.recruitment-introduction__label {
+  color: #b61a00;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: .06em;
+}
+
+.recruitment-introduction h2 {
+  margin: 12px 0 0;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.recruitment-introduction__divider {
+  width: 70px;
+  height: 3px;
+  margin: 22px auto 30px;
+  background: #b61a00;
+}
+
+.recruitment-introduction__copy {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.recruitment-introduction__copy p + p,
+.recruitment-introduction__copy ul + p,
+.recruitment-introduction__copy h3 {
+  margin-top: 20px;
+}
+
+.recruitment-introduction__copy h3 {
+  margin-bottom: 10px;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+.recruitment-introduction__industries {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin-top: 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.recruitment-introduction__industries li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.recruitment-introduction__industries span {
+  color: #b61a00;
+  font-weight: 700;
+}
+
+.recruitment-introduction__action { margin-top: 30px; text-align: center; }
+.recruitment-introduction__action a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  border-radius: 999px;
+  background: #b61a00;
+  color: #fff;
+  text-decoration: none;
+}
+.recruitment-introduction__action a:focus-visible { outline: 3px solid #303030; outline-offset: 3px; }
+.recruitment-introduction__action svg { width: 20px; height: 20px; }
+
+@media (max-width: 767px) {
+  .recruitment-introduction { padding: 40px 20px; }
+  .recruitment-introduction__inner { padding: 25px 20px; }
+  .recruitment-introduction h2 { font-size: 28px; }
+  .recruitment-introduction__copy { font-size: 16px; }
+  .recruitment-introduction__copy h3 { font-size: 22px; }
+}

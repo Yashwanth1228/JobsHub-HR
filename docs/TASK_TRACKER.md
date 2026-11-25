@@ -1,5 +1,11 @@
 # Task tracker
 
+## Homepage introduction synchronization — 2026-11-25
+
+- Added the owner-supplied recruitment introduction between About Us and Our Services, with responsive industry highlights and the existing Contact Us route.
+- The public response available during inspection did not contain the new section; live visual comparison and the specified Roboto fonts remain to be verified. Pending enquiry backend integration and disabled form states are unchanged.
+- `npm run lint`, `npm run build`, and `node --test tests/*.test.mjs` passed. Generated homepage HTML places the introduction between the existing sections and contains the Contact Us link and disabled quote button. Browser visual and overflow checks remain pending.
+
 ## Phase 4C/4D — local enquiry backend
 
 - Added an opt-in Next.js enquiry endpoint, standalone WordPress plugin, private enquiry admin screen and a prepared but unused frontend submission hook. Existing forms stay disabled and live WordPress remains untouched.

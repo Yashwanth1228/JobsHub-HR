@@ -1,5 +1,11 @@
 # Design reference
 
+## Homepage recruitment introduction — 2026-11-25
+
+The project owner supplied the new introduction copy and reference settings for a section between About Us and Our Services. The Next.js homepage now includes that copy, a bordered warm-white panel, industry highlights, and a Contact Us link. Reference settings include a 1200px content width, 20px panel radius, #b61a00 accent, #faf8f7 panel, and #e8e2df border. Responsive spacing is provisional.
+
+The public homepage response available during inspection did not include the new section, so its live layout, typography and responsive behavior could not be independently verified. Roboto and Roboto Slab are requested in scoped CSS with fallbacks; the project does not currently provide those font files. Compare at matching viewport sizes and confirm font loading before claiming visual parity.
+
 ## Approved direction
 
 The current production website, https://jobshubhr.com/, is the high-level reference for faithful reproduction. An unsolicited redesign is outside scope.

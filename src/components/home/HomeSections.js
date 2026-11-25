@@ -3,6 +3,7 @@ import Link from "next/link";
 import { clientLogos, posts, processes, services } from "./homeContent";
 import FaqSections from "./FaqSections";
 import TestimonialsCarousel from "./TestimonialsCarousel";
+import RecruitmentIntroduction from "./RecruitmentIntroduction";
 import "./ClientsMarquee.css";
 
 const wrap = "mx-auto max-w-[1150px] px-6 md:px-8";
@@ -64,6 +65,8 @@ export default function HomeSections() {
           </div>
         </div>
       </section>
+
+      <RecruitmentIntroduction />
 
       <section aria-labelledby="services-heading" className="relative my-[50px] bg-white px-[30px] py-10 text-[#303030]">
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[url('/images/home/Pattern-2-Convertido.png')] bg-center bg-repeat opacity-10 [background-size:50%_auto]" />
