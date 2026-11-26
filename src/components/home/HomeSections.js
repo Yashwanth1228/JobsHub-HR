@@ -4,6 +4,7 @@ import { clientLogos, posts, processes, services } from "./homeContent";
 import FaqSections from "./FaqSections";
 import TestimonialsCarousel from "./TestimonialsCarousel";
 import RecruitmentIntroduction from "./RecruitmentIntroduction";
+import EnquiryForm from "@/components/common/EnquiryForm";
 import "./ClientsMarquee.css";
 
 const wrap = "mx-auto max-w-[1150px] px-6 md:px-8";
@@ -116,15 +117,7 @@ export default function HomeSections() {
             </a>
           </div>
           <div className="min-w-0 rounded-[25px] border border-[#313131] p-6 sm:p-10 lg:p-[60px]">
-            <div role="form" aria-label="Get a quote" aria-describedby="quote-unavailable">
-              <fieldset className="grid gap-5">
-                <label><span className="sr-only">Business Email (required)</span><input type="email" name="email" placeholder="Business Email" required className="block h-[42px] w-full rounded-[10px] border border-[#777] bg-white px-3 placeholder:text-[#666] placeholder:opacity-100" /></label>
-                <label><span className="sr-only">Full Name</span><input type="text" name="name" placeholder="Full Name" className="block h-[42px] w-full rounded-[10px] border border-[#777] bg-white px-3 placeholder:text-[#666] placeholder:opacity-100" /></label>
-                <label><span className="sr-only">Share why you are contacting</span><textarea name="message" rows={4} placeholder="Share why you are contacting" className="block h-[112px] w-full rounded-[10px] border border-[#777] bg-white p-3 placeholder:text-[#666] placeholder:opacity-100" /></label>
-                <button type="button" disabled className="h-[40px] w-full cursor-not-allowed rounded-[3px] bg-[#b61a00] px-6 text-black sm:w-1/2">Get a quote</button>
-              </fieldset>
-              <p id="quote-unavailable" className="sr-only">Online submissions are not yet available. Please call us using the number above.</p>
-            </div>
+            <EnquiryForm type="quote" enabled={process.env.NODE_ENV === 'development' && process.env.ENQUIRIES_LOCAL_TEST === 'true' && process.env.ENQUIRIES_WORDPRESS_ORIGIN === 'https://jobshubhr-test.local'} />
           </div>
         </div>
       </section>

@@ -1,5 +1,30 @@
 # Task tracker
 
+## Phase 4E.4 — local limiter and form integration
+
+- Added versioned WordPress database counters for global and per-email limits; local schema upgrade preserved existing enquiry records. Local tests observed 120 global accepts then 429 and 10 concurrent email accepts then 429, with Retry-After, and verified an expired bucket reset.
+- Connected both forms to the enquiry hook behind an explicit development-only LocalWP gate. Normal configuration remains disabled. An isolated loopback Next.js HTTP test stored contact and quote enquiries, confirmed repeat/conflict behavior and captured two Mailpit messages. Browser interaction, limiter-storage failure, real upstream timeout and complete end-to-end UI testing remain pending.
+- Global/email limits are not a substitute for trusted proxy and edge abuse protection. Production notification recovery, monitoring, retention, privacy, delivery and hosting checks remain pending.
+
+## Phase 4E.4 — enquiry integration in progress
+
+- The shared frontend hook now prevents simultaneous submissions, retains the idempotency key after an ambiguous failure, and distinguishes stored enquiries with pending or failed notifications. The hook is not yet connected to either form; both remain disabled.
+- Durable shared rate limiting and a verified trusted client-address boundary have not yet been implemented. Local end-to-end testing and production readiness remain pending; the existing enablement flag is not evidence of rate limiting.
+
+## Phase 4E.3 — local enquiry runtime verification
+
+- Verified the local plugin is active, its source matches this project, both unique indexes exist, and unauthenticated requests receive 401. A dedicated local service identity has the enquiry capability without administrator capability; credentials are stored only in ignored `.env.local`.
+- Node 24 connects to the local HTTPS site with `--use-system-ca`; default Node trust rejected its self-signed certificate. Local PHP SMTP points to running Mailpit. Synthetic contact and quote submissions, same-key repeats, concurrent duplicate inserts, key conflict, invalid input and invalid credentials behaved as expected; notifications were captured by Mailpit.
+- A simulated mail failure returned stored/failed and a direct local retry returned accepted. Admin list rendering was checked through WordPress PHP, not a browser. The Next.js handler was exercised directly against local WordPress with temporary isolated test flags; the existing development server remains disabled. Actual browser end-to-end, admin retry action and a real upstream timeout remain unverified.
+- The public forms remain disabled. Durable rate limiting, monitoring and recovery, retention, staging and production acceptance remain pending.
+
+## Phase 4E.1 — local plugin validation and packaging
+
+- LocalWP PHP 8.2.29 passed syntax validation for the plugin's single PHP file. The LocalWP site configuration enables the plugin's `mbstring` dependency; actual WordPress runtime behavior remains unverified.
+- Created `artifacts/jobshubhr-enquiries.zip` with the plugin source at `jobshubhr-enquiries/jobshubhr-enquiries.php`; archive content matches the source and ZIP artifacts are Git-ignored.
+- `npm run lint`, `npm run build`, and all 10 Node tests passed. No plugin installation, activation, email, or enquiry submission was performed.
+- LocalWP currently uses HTTP while the Next.js enquiry gateway requires HTTPS. Trusted local HTTPS, WordPress/database/authentication tests, durable rate limiting, notification recovery, retention and form enablement remain pending.
+
 ## Homepage introduction synchronization — 2026-11-25
 
 - Added the owner-supplied recruitment introduction between About Us and Our Services, with responsive industry highlights and the existing Contact Us route.

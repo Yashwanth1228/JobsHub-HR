@@ -2,11 +2,11 @@
 /**
  * Plugin Name: JobsHub HR Enquiries
  * Description: Private enquiry storage and notification endpoint.
- * Version: 1.0.0
+ * Version: 1.1.0
  */
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
-const JOBSHUBHR_ENQUIRIES_VERSION = '1.0.0';
+const JOBSHUBHR_ENQUIRIES_VERSION = '1.1.0';
 const JOBSHUBHR_ENQUIRIES_CAP = 'submit_jobshubhr_enquiries';
 
 function jobshubhr_table() { global $wpdb; return $wpdb->prefix . 'jobshubhr_enquiries'; }
@@ -34,11 +34,20 @@ function jobshubhr_schema() {
   UNIQUE KEY reference (reference),
   KEY source_status (source,notification)
  ) $collate;" );
+ $rate_table = $wpdb->prefix . 'jobshubhr_enquiry_limits';
+ dbDelta( "CREATE TABLE $rate_table (
+  bucket char(64) NOT NULL,
+  expires_at bigint(20) unsigned NOT NULL,
+  hits int unsigned NOT NULL DEFAULT 0,
+  PRIMARY KEY  (bucket),
+  KEY expires_at (expires_at)
+ ) $collate;" );
  // Do not mark a failed or incomplete migration as installed.
  $indexes = $wpdb->get_results( "SHOW INDEX FROM $table", ARRAY_A );
  $unique = array();
  foreach ( (array) $indexes as $index ) { if ( '0' === (string) $index['Non_unique'] ) { $unique[] = $index['Key_name']; } }
- if ( in_array( 'request_key', $unique, true ) && in_array( 'reference', $unique, true ) ) { update_option( 'jobshubhr_enquiries_schema', JOBSHUBHR_ENQUIRIES_VERSION, false ); }
+ $rate_exists = $wpdb->get_var( $wpdb->prepare( 'SHOW TABLES LIKE %s', $wpdb->esc_like( $rate_table ) ) ) === $rate_table;
+ if ( $rate_exists && in_array( 'request_key', $unique, true ) && in_array( 'reference', $unique, true ) ) { update_option( 'jobshubhr_enquiries_schema', JOBSHUBHR_ENQUIRIES_VERSION, false ); }
 }
 register_activation_hook( __FILE__, 'jobshubhr_schema' );
 add_action( 'admin_init', function () { if ( get_option( 'jobshubhr_enquiries_schema' ) !== JOBSHUBHR_ENQUIRIES_VERSION ) { jobshubhr_schema(); } } );
@@ -71,7 +80,31 @@ function jobshubhr_notify( $id ) {
 
 add_action( 'rest_api_init', function () {
  register_rest_route( 'jobshubhr/v1', '/enquiries', array( 'methods' => 'POST', 'permission_callback' => function () { return current_user_can( JOBSHUBHR_ENQUIRIES_CAP ); }, 'callback' => 'jobshubhr_receive' ) );
+ register_rest_route( 'jobshubhr/v1', '/enquiry-limit', array( 'methods' => 'POST', 'permission_callback' => function () { return current_user_can( JOBSHUBHR_ENQUIRIES_CAP ); }, 'callback' => 'jobshubhr_limit_request' ) );
 } );
+
+// One atomic fixed-window upsert per bucket. No raw email is persisted.
+function jobshubhr_limit_request( WP_REST_Request $request ) {
+ global $wpdb;
+ if ( get_option( 'jobshubhr_enquiries_schema' ) !== JOBSHUBHR_ENQUIRIES_VERSION ) { return new WP_Error( 'limiter_unavailable', 'Unavailable.', array( 'status' => 503 ) ); }
+ $input = $request->get_json_params();
+ if ( ! is_array( $input ) || ! isset( $input['scope'] ) || ! in_array( $input['scope'], array( 'global', 'email' ), true ) ) { return new WP_Error( 'invalid_scope', 'Invalid request.', array( 'status' => 400 ) ); }
+ $scope = $input['scope'];
+ $window = defined( 'JOBSHUBHR_LIMIT_WINDOW' ) ? max( 60, (int) JOBSHUBHR_LIMIT_WINDOW ) : 3600;
+ $limit = 'global' === $scope ? ( defined( 'JOBSHUBHR_GLOBAL_LIMIT' ) ? max( 1, (int) JOBSHUBHR_GLOBAL_LIMIT ) : 120 ) : ( defined( 'JOBSHUBHR_EMAIL_LIMIT' ) ? max( 1, (int) JOBSHUBHR_EMAIL_LIMIT ) : 10 );
+ $email = isset( $input['email'] ) && is_string( $input['email'] ) ? strtolower( trim( $input['email'] ) ) : '';
+ if ( 'email' === $scope && ( ! $email || strlen( $email ) > 254 ) ) { return new WP_Error( 'invalid_email', 'Invalid request.', array( 'status' => 400 ) ); }
+ $table = $wpdb->prefix . 'jobshubhr_enquiry_limits';
+ $now = time(); $expiry = ( intdiv( $now, $window ) + 1 ) * $window;
+ $bucket = hash_hmac( 'sha256', $scope . ':' . ( 'email' === $scope ? $email : 'all' ), wp_salt( 'auth' ) );
+ $sql = $wpdb->prepare( "INSERT INTO $table (bucket,expires_at,hits) VALUES (%s,%d,1) ON DUPLICATE KEY UPDATE hits=IF(expires_at<=%d,1,hits+1), expires_at=IF(expires_at<=%d,%d,expires_at)", $bucket, $expiry, $now, $now, $expiry );
+ if ( false === $wpdb->query( $sql ) ) { return new WP_Error( 'limiter_unavailable', 'Unavailable.', array( 'status' => 503 ) ); }
+ $row = $wpdb->get_row( $wpdb->prepare( "SELECT hits,expires_at FROM $table WHERE bucket=%s", $bucket ) );
+ if ( ! $row ) { return new WP_Error( 'limiter_unavailable', 'Unavailable.', array( 'status' => 503 ) ); }
+ $wpdb->query( $wpdb->prepare( "DELETE FROM $table WHERE expires_at < %d LIMIT 50", $now - $window ) );
+ if ( (int) $row->hits > $limit ) { $response = new WP_REST_Response( array( 'code' => 'rate_limited' ), 429 ); $response->header( 'Retry-After', max( 1, (int) $row->expires_at - $now ) ); return $response; }
+ return new WP_REST_Response( array( 'allowed' => true ), 200 );
+}
 function jobshubhr_receive( WP_REST_Request $request ) {
  global $wpdb;
  if ( get_option( 'jobshubhr_enquiries_schema' ) !== JOBSHUBHR_ENQUIRIES_VERSION ) { return new WP_Error( 'storage_unavailable', 'Storage unavailable.', array( 'status' => 503 ) ); }
